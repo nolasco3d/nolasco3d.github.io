@@ -1,15 +1,46 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var babel = require('gulp-babel');
+// Imports functions from Gulp
+const { 
+    task,
+    series,
+    parallel,
+    src,
+    watch,
+    dest
+} = require('gulp');
 
-gulp.task('sass', gulp.series( function() {
-    return gulp.src(['node_modules/bulma/bulma.sass', 'src/assets/scss/*.scss'])
+// Variables and Loaders
+let sass        = require('gulp-sass'),
+    urlAdjust   = require('gulp-css-url-adjuster'),
+    // babel       = require('gulp-babel'),
+    BrowserSync = require('browser-sync').create(),
+    reload      = BrowserSync.reload
+    // rename  = require('gulp-rename'),
+;
+
+// Compile/Process Sass
+function compile_sass() {
+    return src(['src/assets/scss/*.scss'])
     .pipe(sass())
-    .pipe(gulp.dest('public'));
-}));
+    .pipe(urlAdjust({
+        prependRelative: '../images/'
+    }))
+    .pipe(dest('public/assets/css'))
+    .pipe(BrowserSync.stream());
+}
 
-gulp.task('watch', gulp.series( function() {
-    gulp.watch(['node_modules/bulma/bulma.sass', 'src/assets/scss/*.scss']), gulp.parallel(['sass']);
-}))
+// Create Server and Live Reload
+function watch_files() {
+    BrowserSync.init({
+        server: {
+            baseDir: './public'
+        }
+    });
+    
+    // Watch SASS/SCSS files and Reload
+    watch('src/assets/scss/**/*.scss', compile_sass);
+    // Watch HTML files and Reload
+    watch('./public/*.html').on('change', reload);
+}
 
-gulp.task('default', gulp.series(['sass','watch']));
+// Define default task
+task('default', series(compile_sass, watch_files));
