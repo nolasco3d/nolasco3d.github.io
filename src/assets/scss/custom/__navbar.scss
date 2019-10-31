@@ -1,0 +1,17 @@
+.navbar {
+    font-size: 1rem;
+    border-bottom: solid 1px $cc-1;
+    height: 6.3rem;
+    position: sticky !important;
+    top:0;
+    padding: 0 30px;
+
+    .logo {
+        margin: 0 5rem;
+    }
+
+}
+
+$navbar-item-color:         rgb(119, 119, 119);
+$navbar-item-hover-color:   rgb(51, 51, 51);  
+// $navbar-item-hover-background-color :   rgb(250, 250, 250);  

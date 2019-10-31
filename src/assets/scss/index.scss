@@ -1,5 +1,4 @@
-.cover {
-    background-image: url('cover.jpg');
-    background-size: cover;
-    height: 100vh;
-}
+@import '__typography.scss';
+@import '__customize.scss';
+@import 'node_modules/bulma/bulma.sass';
+

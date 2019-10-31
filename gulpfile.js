@@ -19,7 +19,7 @@ let sass        = require('gulp-sass'),
 
 // Compile/Process Sass
 function compile_sass() {
-    return src(['node_modules/bulma/bulma.sass', 'src/assets/scss/*.scss'])
+    return src(['src/assets/scss/*.scss'])
     .pipe(sass())
     .pipe(urlAdjust({
         prependRelative: '../images/'
@@ -37,10 +37,7 @@ function watch_files() {
     });
     
     // Watch SASS/SCSS files and Reload
-    watch([
-        'node_modules/bulma/bulma.sass',
-         'src/assets/scss/*.scss'
-        ], compile_sass);
+    watch('src/assets/scss/**/*.scss', compile_sass);
     // Watch HTML files and Reload
     watch('./public/*.html').on('change', reload);
 }
