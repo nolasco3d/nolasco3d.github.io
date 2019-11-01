@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0-beta.2",

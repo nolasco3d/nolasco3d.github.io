@@ -1,3 +1,9 @@
+$fa-font-path: '../fonts/webfonts';
+@import 'fontawesome/fontawesome.scss';
+@import 'fontawesome/regular.scss';
+
+// Fonts
+
 @font-face {
     font-family: 'Open Sans';
     src: local('../fonts/Open Sans Light Italic'), local('../fonts/OpenSans-LightItalic'),
