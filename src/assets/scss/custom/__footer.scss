@@ -1,0 +1,17 @@
+.footer {
+    background-color: $cc-5 !important;
+    outline: 1px dashed $cc-6;
+    outline-offset: -6px;
+    position: relative;
+
+    p {
+        color: darken($cc-3, 30%);
+        font-size: .9rem;
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+    }
+
+    .muted {
+        font-size: .6rem;
+    }
+}

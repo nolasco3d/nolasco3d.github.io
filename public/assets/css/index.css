@@ -5831,6 +5831,26 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+/*!
+ * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("../images/../fonts/webfonts/fa-solid-900.eot");
+  src: url("../images/../fonts/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../images/../fonts/webfonts/fa-solid-900.woff2") format("woff2"), url("../images/../fonts/webfonts/fa-solid-900.woff") format("woff"), url("../images/../fonts/webfonts/fa-solid-900.ttf") format("truetype"), url("../images/../fonts/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
 @font-face {
   font-family: 'Open Sans';
   src: local("../fonts/Open Sans Light Italic"), local("../fonts/OpenSans-LightItalic"), url("../images/../fonts/OpenSans-LightItalic.woff2") format("woff2"), url("../images/../fonts/OpenSans-LightItalic.woff") format("woff"), url("../images/../fonts/OpenSans-LightItalic.ttf") format("truetype");
@@ -5894,6 +5914,15 @@ readers do not read off random characters that represent icons */
   font-style: italic;
 }
 
+.button.decorated {
+  border-radius: unset !important;
+  border: none !important;
+  background-color: #212127 !important;
+  outline: 1px dashed #4b4846;
+  outline-offset: -6px;
+  color: #8a8492 !important;
+}
+
 h1,
 h2,
 h3,
@@ -5913,19 +5942,6 @@ p {
   font-size: 1.7rem;
   line-height: 2.3rem;
   font-weight: 300;
-}
-
-.navbar {
-  font-size: 1rem;
-  border-bottom: solid 1px #f4f4f9;
-  height: 6.3rem;
-  position: sticky !important;
-  top: 0;
-  padding: 0 30px;
-}
-
-.navbar .logo {
-  margin: 0 5rem;
 }
 
 .cover {
@@ -5969,12 +5985,76 @@ p {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(36, 34, 34, 0.33) 100%);
 }
 
-.services .columns {
-  padding-top: 10rem;
+.navbar {
+  font-size: 1rem;
+  border-bottom: solid 1px #f4f4f9;
+  height: 5.5rem;
+  position: sticky !important;
+  top: 0;
+  padding: 0 30px;
+}
+
+.navbar .navbar-start {
+  margin: unset !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .navbar-item {
+  padding: 0 1.2rem;
+}
+
+.navbar .navbar-item:hover {
+  background-color: unset;
+}
+
+.navbar .logo {
+  margin: 0 5rem;
+}
+
+.services {
+  background: #fff;
+  padding: 10rem 0;
 }
 
 .services h2 {
   font-size: 2.25rem;
+}
+
+.contact {
+  background-color: #f4f4f9;
+  position: relative;
+  padding: 6rem;
+}
+
+.contact input {
+  letter-spacing: .3rem;
+}
+
+.contact input,
+.contact textarea {
+  border-radius: unset;
+  border: none;
+  font-family: 'Open Sans';
+}
+
+.footer {
+  background-color: #212127 !important;
+  outline: 1px dashed #4b4846;
+  outline-offset: -6px;
+  position: relative;
+}
+
+.footer p {
+  color: #8a8492;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+}
+
+.footer .muted {
+  font-size: .6rem;
 }
 
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */

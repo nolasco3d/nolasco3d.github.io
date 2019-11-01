@@ -10,22 +10,22 @@
 </head>
 <body>
     
-    <div class="container is-fluid is-paddingless">
-        <div class="cover"> 
-            <div class="fixed columns">
-                <!-- has-text-centered -->
-                <!-- <h4>Hi, I'm</h4> -->
-                <div class="column">
-                    <h1>André Nolasco</h1>
-                    <h5>3D GENERALIST | DESIGNER | WEB DEVELOPER</h5>
+    <section class="home">
+        <div class="container is-fluid is-paddingless">
+            <div class="cover">
+                <div class="fixed columns">
+                    <div class="column">
+                        <h1>André Nolasco</h1>
+                        <h5>3D GENERALIST | DESIGNER | WEB DEVELOPER</h5>
+                    </div>
+                    <!-- <h4>2014</h4> -->
                 </div>
-                <!-- <h4>2014</h4> -->
+            </div>
+            <div>
+        
             </div>
         </div>
-        <div>
-
-        </div>
-    </div>
+    </section>
     
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -39,8 +39,8 @@
         
         <div id="navbarBasicExample" class="navbar-menu">
             
-            <div class="navbar-end">
-                <a class="navbar-item">
+            <div class="navbar-start">
+                <a class="navbar-item" onclick="youScroll.to('.home').start()">
                     HOME
                 </a>
                 <a class="navbar-item" onclick="youScroll.to('.services').start()">
@@ -48,25 +48,20 @@
                 </a>
                 <a class="navbar-item">
                     PORTFOLIO
-                </a>               
-            </div>
-            
-            <a class="navbar-item logo" href="https://bulma.io">
-                <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> -->
-                <p>LOGO</p>
-            </a>
-            
-            <div class="navbar-start ">
-                <a class="navbar-item">
-                    ABOUT US
                 </a>
                 <a class="navbar-item">
-                    JOURNAL
+                    ABOUT
                 </a>
+                
                 <a class="navbar-item">
                     CONTACT
                 </a>
             </div>
+            
+            <!-- <a class="navbar-item logo" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                <p>LOGO</p>
+            </a> -->
             
         </div>
     </nav>
@@ -81,36 +76,90 @@
             </div>
                 <div class="columns has-text-centered">
                     <div class="column">
-                        <!-- icon -->
-                        <i class="far fa-heart"></i>
-                        <a class="button">Button</a>
+                        <span class="icon is-large">
+                            <i class="fas fa-cube"></i>
+                        </span>
                     </div>
                     <div class="column">
-                        <!-- icon -->
-                        <i class="far fa-heart"></i>
-                        <a class="button">Button</a>
+                        <span class="icon is-large">
+                            <i class="fas fa-pencil-alt"></i>
+                        </span>
                     </div>
                     <div class="column">
-                        <!-- icon -->
-                        <i class="far fa-heart"></i>
-                        <a class="button">Button</a>
+                        <span class="icon is-large">
+                            <i class="fas fa-video"></i>
+                        </span>
                     </div>
-                    <div class="column">
-                        <!-- icon -->
-                        <i class="far fa-heart"></i>
-                        <a class="button">Button</a>
-                    </div>
+                    <!-- <div class="column">
+                        <span class="icon is-large">
+                            <i class="far fa-heart"></i>
+                        </span>
+                    </div> -->
                 </div>
             </div>
-        </section>
+    </section>
 
-        <script src="assets/js/youscroll.js">
-        youScroll.defaultConfigs = {
-            duration: 100
-        }
-        </script>
-        <script>
-        
-        </script>
+    <section class="contact">
+        <div class="container is-fluid">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <form action="">
+                        <div class="columns">
+                            <div class="column">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Name">
+                                    </div>
+                                </div>
+                            
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="email" placeholder="E-mail">
+                                    </div>
+                                </div>
+                            
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="column">
+                                <div class="field">
+                                    <div class="control">
+                                        <textarea class="textarea" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button decorated is-link is-fullwidth ">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <div class="columns">
+                <div class="column">
+                    <p>André Nolasco | 2019 | +55(31)99198-7177</p>
+                    <p class="muted">Inspirated on <br> 
+                        <em>T-ONE BOOSTRAP CREATIVE TEMPLATE</em> | THEMEFOREST.NET</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/youscroll.js"></script>
 </body>
 </html>

@@ -5,10 +5,26 @@ $cc-2: rgb( 238, 238, 238);
 $cc-3: rgb( 215, 213, 218);
 $cc-4: rgb( 38, 41, 42);
 $cc-5: rgb( 33, 33, 39);
+$cc-6: rgb(75, 72, 70);
 
 
 // Fonts
 
 
 
+@mixin decoration {
+    background-color: $cc-5 !important;
+    outline: 1px dashed $cc-6;
+    outline-offset: -6px;
+    color: darken($cc-3, 30%) !important;
+}
 
+.button {
+
+    &.decorated {
+    border-radius: unset !important;
+    border: none !important;
+    @include decoration();
+    }
+
+}
