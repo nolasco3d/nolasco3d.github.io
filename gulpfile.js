@@ -13,7 +13,10 @@ let sass        = require('gulp-sass'),
     urlAdjust   = require('gulp-css-url-adjuster'),
     // babel       = require('gulp-babel'),
     BrowserSync = require('browser-sync').create(),
-    reload      = BrowserSync.reload
+    reload      = BrowserSync.reload,
+    fonts_path  = 'public/assets/fonts',
+    // images_path = 'public/assets/images',
+    css_path    = 'public/assets/css'
     // rename  = require('gulp-rename'),
 ;
 
@@ -24,7 +27,7 @@ function compile_sass() {
     .pipe(urlAdjust({
         prependRelative: '../images/'
     }))
-    .pipe(dest('public/assets/css'))
+    .pipe(dest(css_path))
     .pipe(BrowserSync.stream());
 }
 
@@ -42,5 +45,21 @@ function watch_files() {
     watch('./public/*.html').on('change', reload);
 }
 
+
+// Testing FontAwesome copy
+// function fontAwesome(done) {
+//     // Files to public fulder
+//     src(['node_modules/@fortawesome/fontawesome-free/webfonts'])
+//     .pipe(dest(fonts_path + '/webfonts'));
+    
+//     // Files to src
+//     src([
+//         'node_modules/@fortawesome/fontawesome-free/scss/**/*.scss'
+//     ])
+//     .pipe(dest('src/assets/scss/fontawesome'));
+
+//     done();
+// }
+
 // Define default task
-task('default', series(compile_sass, watch_files));
+task('default', series( compile_sass, watch_files));
