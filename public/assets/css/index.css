@@ -6095,6 +6095,53 @@ p {
   background: #f4f4f9;
 }
 
+.experience {
+  position: relative;
+  padding: 10rem 0;
+  background: #212127;
+  color: #565d60;
+}
+
+.experience .job {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.experience .job h3 {
+  color: #d7d5da;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding-bottom: 2rem;
+}
+
+.experience .job h5 {
+  color: #bdbac2;
+  font-size: 1.4rem;
+  font-family: 'Montserrat';
+  letter-spacing: .15rem;
+}
+
+.experience .job p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.experience .job:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  border-bottom: 1px dashed #4b4846;
+  bottom: 0;
+}
+
+.experience .job .date p {
+  font-size: 1.3rem;
+  color: #d7d5da;
+  line-height: 2rem;
+  letter-spacing: .15rem;
+}
+
 .about {
   position: relative;
   padding: 10rem 0;
