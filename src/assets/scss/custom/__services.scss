@@ -1,13 +1,42 @@
 .services {
     background: #fff;
     padding: 10rem 0;
-    .columns {
+    
+
+    .icon {
+        font-size: 6rem;
+        line-height: 6rem;
+        margin: 6rem 0;
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        &:before {
+            content:'';
+            width: 40px;
+            height: 2px;
+            background: black;
+            position: absolute;
+            bottom: -50%;
+            transform: translateY(-50%);
+            display: block;
+        }
     }
+
+    
+
     p {
         // font-size: 1.25rem;
     }
     h2 {
         font-size: 2.25rem;
+        
+        &.subtitle {
+            font-family: 'Montserrat';
+            padding: 1rem 0 ;
+            letter-spacing: .5rem;
+            text-transform: uppercase;
+        }
 
     }
 }
