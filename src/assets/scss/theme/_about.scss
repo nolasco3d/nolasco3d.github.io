@@ -1,0 +1,23 @@
+.about {
+    position: relative;
+    padding: 60px  0;
+
+    @include desktop {
+        padding: 80px  0;
+    }
+
+    .container {
+        padding: 0 $gap;
+
+        h2 {
+            font-size: $size-2;
+            line-height: $size-2;
+            font-family: 'Merriweather';
+            color: $cc-5;
+        }
+
+        .pic {
+            border-radius: 4px;
+        }
+    }
+}

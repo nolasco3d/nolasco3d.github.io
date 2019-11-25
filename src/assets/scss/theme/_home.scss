@@ -1,0 +1,58 @@
+.home {
+    .cover {
+        background: url('cover.jpg');
+        background-size: cover;
+        min-height: 105vh;
+
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        position: relative;
+
+        @include touch {
+            background-position-x: center;
+        }
+
+        .fixed {
+            position: fixed;
+            overflow: hidden;
+            font-family: 'Montserrat';
+            text-transform: uppercase;
+
+            h1 {
+                line-height: $size-1; 
+                @include desktop {
+                    font-size: $size-1;
+                }
+                @include touch {
+                    font-size: $size-2;
+                }   
+            }
+
+            h3 {
+                padding-top: 10px;
+                
+                line-height: $size-6;
+                @include desktop {
+                    font-size: $size-6;
+                    letter-spacing: .3rem;
+                }
+                @include touch {
+                    font-size: $size-7;
+                }
+            }
+        }
+
+         &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;;
+            background: linear-gradient(to top, rgba(0,0,0, .8) 0%, rgba(22, 21, 21, 0.5) 100%);
+        }
+    }
+}

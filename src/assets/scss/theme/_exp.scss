@@ -1,0 +1,53 @@
+.experience {
+    position: relative;
+    padding: 60px  0;
+    background: $cc-5;
+    color: lighten($cc-4, 20%);
+
+    @include desktop {
+        padding: 80px  0;
+    }
+
+    .container {
+        padding: 0 $gap;
+
+        .job {
+            position: relative;
+            padding-bottom: 40px;
+
+            h3 {
+                color: $cc-3;
+                font-size: $size-3;
+                line-height: $size-3;
+                padding-bottom: 2rem;
+            }
+
+            h5 {
+                font-size: $size-5;
+                color: darken($cc-3, 10%);
+                font-family: 'Montserrat';
+                letter-spacing: .1rem;
+            }
+
+            &:not(:last-child):after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                border-bottom: dashed 1px $cc-6;
+                bottom: 20px;
+                
+            }
+
+            .date {
+                p {
+                    // font-size: ;
+                    // line-height: ;
+                    color: $cc-3;
+                    letter-spacing: .1rem;
+                }
+            }
+        }
+
+    }
+}
