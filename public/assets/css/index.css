@@ -5851,6 +5851,24 @@ readers do not read off random characters that represent icons */
   font-weight: 900;
 }
 
+/*!
+ * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("../images/../fonts/webfonts/fa-brands-400.eot");
+  src: url("../images/../fonts/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../images/../fonts/webfonts/fa-brands-400.woff2") format("woff2"), url("../images/../fonts/webfonts/fa-brands-400.woff") format("woff"), url("../images/../fonts/webfonts/fa-brands-400.ttf") format("truetype"), url("../images/../fonts/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands';
+}
+
 @font-face {
   font-family: 'Open Sans';
   src: local("../fonts/Open Sans Light Italic"), local("../fonts/OpenSans-LightItalic"), url("../images/../fonts/OpenSans-LightItalic.woff2") format("woff2"), url("../images/../fonts/OpenSans-LightItalic.woff") format("woff"), url("../images/../fonts/OpenSans-LightItalic.ttf") format("truetype");
@@ -14576,6 +14594,31 @@ fieldset[disabled] .select select:hover {
 
 .about .container .pic {
   border-radius: 4px;
+}
+
+.about .container .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 15px 0;
+  font-size: 1.6rem;
+}
+
+.about .container .social a {
+  text-decoration: none;
+  color: unset;
+}
+
+.about .container .social li {
+  padding: 6px 12px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.about .container .social li:hover {
+  color: tomato;
+  transition: all ease-in-out 200ms;
 }
 
 .experience {
