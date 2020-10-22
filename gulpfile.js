@@ -12,7 +12,7 @@ let sass        = require('gulp-sass'),
     BrowserSync = require('browser-sync').create(),
     reload      = BrowserSync.reload,
     // fonts_path  = 'public/assets/fonts',
-    css_path  = 'public/assets/css'
+    css_path  = 'docs/assets/css'
 ;
 
 // Compile/process SCSS
@@ -30,7 +30,7 @@ function compile_sass() {
 function watch_files() {
     BrowserSync.init({
         server: {
-            baseDir: './public'
+            baseDir: './docs'
         }
     });
 
@@ -38,7 +38,7 @@ function watch_files() {
     watch('src/assets/scss/**/*.scss', compile_sass);
 
     // Watch HTML files and Reload
-    watch('./public/*.html').on('change', reload);
+    watch('./docs/*.html').on('change', reload);
 }
 
 // Default task
