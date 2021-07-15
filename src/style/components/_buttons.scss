@@ -47,7 +47,7 @@
   }
 
   &:hover {
-    -webkit-text-fill-color: $white-color;
+    -webkit-text-fill-color: $dark-grey;
     text-decoration: none;
     // Responsive Button hover hero style
     @include respond(phone) {
@@ -62,11 +62,11 @@
 
 /* Resume Style */
 .cta-btn--resume {
-  color: $white-color;
-  border: 2px solid $white-color;
+  color: $dark-grey;
+  border: 2px solid $dark-grey;
 
   &::after {
-    background: $white-color;
+    background: $dark-grey;
   }
 
   &:hover {
