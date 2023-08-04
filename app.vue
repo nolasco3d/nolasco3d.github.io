@@ -46,6 +46,9 @@ const jobs = [
 ]
 </script>
 <template>
+  <Head>
+    <Title>Curriculum | André Nolasco</Title>
+  </Head>
   <Body class="bg-faded">
     <div class="container mx-auto flex flex-col h-screen prose">
     <HeaderPage />
