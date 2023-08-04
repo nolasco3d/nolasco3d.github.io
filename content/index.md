@@ -1,2 +1,1 @@
-# André Luiz Nolasco de Castro
-### Desenvolvedor Frontend
+# Curriculum | André Nolasco
